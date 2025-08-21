@@ -34,6 +34,10 @@ export default defineConfig(({ mode }) => {
           rewrite: (p) => p.replace(/^\/api/, '')
         }
       }
+    },
+    test: {
+      globals: true,          // lets you use describe/it without imports
+      environment: 'jsdom'    // simulates a browser
     }
   };
 });

@@ -1,15 +1,14 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router'
 
-import { env } from '@/config/env';
 const router = createRouter({
-  history: createWebHistory(env.APP_BASE_PATH),
+  history: createWebHistory('/'),
   routes: [
     {
       path: '/',
-      name: 'Fe Asignment App',
-      component: () => import('../views/Home.vue')
+      name: 'Home',
+      component: () => import('../views/Home.vue') // relative path instead of @ alias
     }
   ]
-});
+})
 
-export default router;
+export default router
